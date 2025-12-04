@@ -4,7 +4,7 @@ namespace Jellyfin.Plugin.PStream;
 
 public class PluginConfiguration : BasePluginConfiguration
 {
-    public string BaseUrl { get; set; } = "https://api.p-stream.example";
+    public string BaseUrl { get; set; } = "https://server.fifthwit.net";
 
     public string ApiKey { get; set; } = string.Empty;
 

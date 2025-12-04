@@ -1,0 +1,21 @@
+[
+  {
+    "name": "P-Stream",
+    "guid": "c1cfe730-699c-46a8-a299-8fae4482fb27",
+    "overview": "Browse and play P-Stream items directly from Jellyfin's channels section.",
+    "description": "Adds a searchable P-Stream channel backed by server.fifthwit.net by default.",
+    "owner": "FifthWit",
+    "category": "Channels",
+    "imageUrl": "",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "changelog": "Initial repository manifest and packaging with default server.fifthwit.net backend.",
+        "targetAbi": "10.9.0",
+        "sourceUrl": "./dist/jellyfin-plugin-pstream_1.0.0.zip",
+        "checksum": "sha256:TO_BE_FILLED",
+        "timestamp": "2025-12-04T00:00:00Z"
+      }
+    ]
+  }
+]

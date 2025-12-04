@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jellyfin.Plugin.PStream")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+437fac3ae7a82adff42913e442a5cb633158685a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0554a16707fa360505b2643b9449184dda80b8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jellyfin.Plugin.PStream")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jellyfin.Plugin.PStream")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

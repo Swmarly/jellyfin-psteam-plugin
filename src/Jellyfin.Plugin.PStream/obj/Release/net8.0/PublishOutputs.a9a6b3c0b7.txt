@@ -1,0 +1,17 @@
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Plugin.PStream.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Plugin.PStream.deps.json
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Plugin.PStream.pdb
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Diacritics.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\ICU4N.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\ICU4N.Transliterator.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\J2N.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\MediaBrowser.Common.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\MediaBrowser.Controller.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Data.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Extensions.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\MediaBrowser.Model.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Emby.Naming.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sunbu\Documents\jellyfin-psteam-plugin\dist\publish\Jellyfin.Plugin.PStream.xml

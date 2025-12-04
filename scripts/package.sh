@@ -7,6 +7,7 @@ VERSION="${1:-1.0.0}"
 PUBLISH_DIR="$ROOT_DIR/dist/publish"
 ZIP_PATH="$ROOT_DIR/dist/jellyfin-plugin-pstream_${VERSION}.zip"
 MANIFEST_PATH="$ROOT_DIR/manifest.json"
+RAW_BASE_URL="https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main"
 
 rm -rf "$PUBLISH_DIR"
 mkdir -p "$PUBLISH_DIR"
@@ -29,8 +30,9 @@ manifest_path = pathlib.Path("$MANIFEST_PATH")
 data = json.loads(manifest_path.read_text())
 entry = data[0]["versions"][0]
 entry["version"] = "$VERSION"
-entry["sourceUrl"] = f"./dist/jellyfin-plugin-pstream_{'$'}{VERSION}.zip"
+entry["sourceUrl"] = f"{RAW_BASE_URL}/dist/jellyfin-plugin-pstream_{'$'}{VERSION}.zip"
 entry["checksum"] = f"sha256:{'$'}{CHECKSUM}"
+entry["timestamp"] = __import__("datetime").datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
 manifest_path.write_text(json.dumps(data, indent=2))
 PY
 

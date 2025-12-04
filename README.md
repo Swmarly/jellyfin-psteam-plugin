@@ -18,6 +18,13 @@ This plugin adds p-stream as a searchable channel inside Jellyfin. Once installe
 This repository now includes a Jellyfin plugin manifest (`manifest.json`) so it can be added directly as a custom repository in
 the Jellyfin admin dashboard. Build and package the plugin, then point Jellyfin at the raw URL for `manifest.json`.
 
+### Installation
+
+1. In Jellyfin, open **Dashboard → Plugins → Repositories** and click **+** to add a new repository.
+2. Enter `https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/manifest.json` as the manifest URL and save.
+3. Go to **Catalog**, locate **P-Stream**, and install the plugin.
+4. Restart Jellyfin after installation if prompted.
+
 ### Building a distributable package
 
 1. Ensure the .NET SDK (8.0+) is available.

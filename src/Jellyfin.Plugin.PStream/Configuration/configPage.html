@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>P-Stream</title>
+</head>
+<body>
+    <div id="pstreamConfiguration" class="sectionConfiguration">
+        <div class="sectionTitle">P-Stream</div>
+        <div class="sectionFields">
+            <div class="field">
+                <label for="baseUrl">API base URL</label>
+                <input id="baseUrl" name="baseUrl" type="text" is="emby-input" />
+                <div class="fieldDescription">Root address of your p-stream server (for example, https://pstream.local/api/).</div>
+            </div>
+            <div class="field">
+                <label for="apiKey">API key (optional)</label>
+                <input id="apiKey" name="apiKey" type="password" is="emby-input" />
+                <div class="fieldDescription">If your p-stream instance requires authentication, provide the key here.</div>
+            </div>
+            <div class="field">
+                <label for="pageSize">Default page size</label>
+                <input id="pageSize" name="pageSize" type="number" min="1" max="100" is="emby-input" />
+                <div class="fieldDescription">Maximum number of items returned per request.</div>
+            </div>
+        </div>
+        <button is="emby-button" type="button" class="raised button-submit block" id="saveConfiguration">Save</button>
+    </div>
+
+    <script type="text/javascript">
+        (function () {
+            const pluginId = 'c1cfe730-699c-46a8-a299-8fae4482fb27';
+
+            function loadConfiguration() {
+                ApiClient.getPluginConfiguration(pluginId).then(config => {
+                    document.getElementById('baseUrl').value = config.BaseUrl || '';
+                    document.getElementById('apiKey').value = config.ApiKey || '';
+                    document.getElementById('pageSize').value = config.DefaultPageSize || 25;
+                });
+            }
+
+            function saveConfiguration() {
+                ApiClient.getPluginConfiguration(pluginId).then(config => {
+                    config.BaseUrl = document.getElementById('baseUrl').value;
+                    config.ApiKey = document.getElementById('apiKey').value;
+                    config.DefaultPageSize = parseInt(document.getElementById('pageSize').value, 10) || 25;
+                    ApiClient.updatePluginConfiguration(pluginId, config).then(Dashboard.processPluginConfigurationUpdateResult);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', loadConfiguration);
+            document.getElementById('saveConfiguration').addEventListener('click', saveConfiguration);
+        })();
+    </script>
+</body>
+</html>

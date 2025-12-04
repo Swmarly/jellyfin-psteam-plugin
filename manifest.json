@@ -6,7 +6,7 @@
     "description": "Adds a searchable P-Stream channel backed by server.fifthwit.net by default.",
     "owner": "FifthWit",
     "category": "Channels",
-    "imageUrl": "",
+    "imageUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/icon.png",
     "versions": [
       {
         "version": "1.0.0",

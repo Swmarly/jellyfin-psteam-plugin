@@ -12,9 +12,9 @@
         "version": "1.0.0",
         "changelog": "Initial repository manifest and packaging with default server.fifthwit.net backend.",
         "targetAbi": "10.9.0",
-        "sourceUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/dist/jellyfin-plugin-pstream_1.0.0.zip",
-        "checksum": "sha256:TO_BE_FILLED",
-        "timestamp": "2025-12-04T00:00:00Z"
+        "sourceUrl": "https://github.com/Swmarly/jellyfin-psteam-plugin/releases/download/v1.0.0/jellyfin-plugin-pstream_1.0.0.zip",
+        "checksum": "sha256:b916cd87126218ec71df52e15db58395558b4356a8569a1b5945f79c4971d3ee",
+        "timestamp": "2025-12-04T22:54:02Z"
       }
     ]
   }

@@ -1,12 +1,12 @@
 using System.Linq;
 using MediaBrowser.Controller.Channels;
 using MediaBrowser.Controller.Library;
-using MediaBrowser.Model.Channels;
+using MediaBrowser.Controller.Providers;
 using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.MediaInfo;
-using MediaBrowser.Model.Serialization;
 using Microsoft.Extensions.Logging;
+using ChannelEnums = MediaBrowser.Model.Channels;
 
 namespace Jellyfin.Plugin.PStream;
 
@@ -27,7 +27,11 @@ public class PStreamChannel : IChannel, IHasCacheKey
 
     public string DataVersion => Plugin.Instance?.Version.ToString() ?? "1.0.0";
 
-    public string GetCacheKey(string userId) => userId + "-pstream";
+    public string HomePageUrl => "https://server.fifthwit.net";
+
+    public ChannelParentalRating ParentalRating => ChannelParentalRating.GeneralAudience;
+
+    public string GetCacheKey(string? userId) => (userId ?? "anon") + "-pstream";
 
     public bool IsEnabledFor(string userId) => true;
 
@@ -36,7 +40,8 @@ public class PStreamChannel : IChannel, IHasCacheKey
         var config = Plugin.Instance?.Configuration ?? new PluginConfiguration();
         _client.Configure(config.BaseUrl, config.ApiKey);
 
-        var searchTerm = query.SearchTerm;
+        // Jellyfin 10.9 no longer forwards an explicit SearchTerm, so reuse FolderId (set when searching) if present.
+        var searchTerm = query.FolderId;
         IReadOnlyList<PStreamItem> items;
 
         if (string.IsNullOrWhiteSpace(searchTerm))
@@ -49,13 +54,11 @@ public class PStreamChannel : IChannel, IHasCacheKey
             items = await _client.SearchAsync(searchTerm, config.DefaultPageSize, cancellationToken).ConfigureAwait(false);
         }
 
-        var results = new ChannelItemResult
+        return new ChannelItemResult
         {
             Items = items.Select(ToChannelItem).ToArray(),
             TotalRecordCount = items.Count,
         };
-
-        return results;
     }
 
     public async Task<IEnumerable<MediaSourceInfo>> GetChannelItemMediaSources(string id, CancellationToken cancellationToken)
@@ -95,30 +98,45 @@ public class PStreamChannel : IChannel, IHasCacheKey
         return new[] { mediaSource };
     }
 
-    public ChannelFeatures GetChannelFeatures()
+    public InternalChannelFeatures GetChannelFeatures()
     {
-        return new ChannelFeatures
+        return new InternalChannelFeatures
         {
-            ContentTypes = new List<ChannelMediaContentType>
+            ContentTypes = new List<ChannelEnums.ChannelMediaContentType>
             {
-                ChannelMediaContentType.Movie,
-                ChannelMediaContentType.Video,
+                ChannelEnums.ChannelMediaContentType.Movie,
             },
-            MediaTypes = new List<ChannelMediaType>
+            MediaTypes = new List<ChannelEnums.ChannelMediaType>
             {
-                ChannelMediaType.Video,
+                ChannelEnums.ChannelMediaType.Video,
             },
-            DefaultSortFields = new List<ChannelItemSortField>
+            DefaultSortFields = new List<ChannelEnums.ChannelItemSortField>
             {
-                ChannelItemSortField.Name,
-                ChannelItemSortField.PremiereDate,
+                ChannelEnums.ChannelItemSortField.Name,
+                ChannelEnums.ChannelItemSortField.PremiereDate,
             },
             SupportsSortOrderToggle = true,
-            SupportsSort = true,
             AutoRefreshLevels = 1,
             MaxPageSize = 50,
-            CanSearch = true,
         };
+    }
+
+    public Task<DynamicImageResponse> GetChannelImage(ImageType type, CancellationToken cancellationToken)
+    {
+        var response = new DynamicImageResponse
+        {
+            Path = "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/icon.png",
+            Protocol = MediaProtocol.Http,
+            HasImage = true,
+            Format = MediaBrowser.Model.Drawing.ImageFormat.Png,
+        };
+
+        return Task.FromResult(response);
+    }
+
+    public IEnumerable<ImageType> GetSupportedChannelImages()
+    {
+        return new[] { ImageType.Primary };
     }
 
     private ChannelItemInfo ToChannelItem(PStreamItem item)
@@ -127,11 +145,10 @@ public class PStreamChannel : IChannel, IHasCacheKey
         {
             Name = item.Title,
             Id = item.Id,
-            ContentType = ChannelMediaContentType.Video,
-            MediaType = ChannelMediaType.Video,
+            ContentType = ChannelEnums.ChannelMediaContentType.Movie,
+            MediaType = ChannelEnums.ChannelMediaType.Video,
             Overview = item.Description,
             ImageUrl = item.Poster,
-            ImageContentType = ChannelMediaImageType.Thumbnail,
             Type = ChannelItemType.Media,
         };
     }

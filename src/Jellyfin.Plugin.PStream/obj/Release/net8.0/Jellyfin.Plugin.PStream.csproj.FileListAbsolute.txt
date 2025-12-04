@@ -1,0 +1,15 @@
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.csproj.AssemblyReference.cache
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.AssemblyInfoInputs.cache
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.AssemblyInfo.cs
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.csproj.CoreCompileInputs.cache
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.sourcelink.json
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/bin/Release/net8.0/Jellyfin.Plugin.PStream.deps.json
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/bin/Release/net8.0/Jellyfin.Plugin.PStream.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/bin/Release/net8.0/Jellyfin.Plugin.PStream.pdb
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/bin/Release/net8.0/Jellyfin.Plugin.PStream.xml
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/refint/Jellyfin.Plugin.PStream.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.xml
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/Jellyfin.Plugin.PStream.pdb
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/Release/net8.0/ref/Jellyfin.Plugin.PStream.dll

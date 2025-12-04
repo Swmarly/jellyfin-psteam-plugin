@@ -28,8 +28,7 @@ the Jellyfin admin dashboard. Build and package the plugin, then point Jellyfin 
 ### Building a distributable package
 
 1. Ensure the .NET SDK (8.0+) is available.
-2. Restore dependencies using the Jellyfin feed: `dotnet restore`. The included `NuGet.Config` adds
-   `https://repo.jellyfin.org/releases/server/v10/nuget/index.json`, which is required to resolve `Jellyfin.Plugin.Sdk`.
+2. Restore dependencies with `dotnet restore` (the plugin now pulls Jellyfin packages directly from nuget.org).
 3. Run `./scripts/package.sh <version>` (for example `./scripts/package.sh 1.0.0`) to publish the plugin, zip the output to
    `dist/jellyfin-plugin-pstream_<version>.zip`, and update the manifest checksum automatically.
 4. Commit and push the updated zip + manifest so Jellyfin can download the plugin when installing from the repository.

@@ -43,7 +43,7 @@ public class PStreamClient
         var payload = await JsonSerializer.DeserializeAsync<PStreamSearchResponse>(stream, cancellationToken: cancellationToken)
             .ConfigureAwait(false);
 
-        return payload?.Results ?? Array.Empty<PStreamItem>();
+        return payload?.Results ?? new List<PStreamItem>();
     }
 
     public async Task<PStreamItem?> GetItemAsync(string id, CancellationToken cancellationToken)

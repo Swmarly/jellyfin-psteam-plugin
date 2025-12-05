@@ -33,8 +33,8 @@ if zip_path.exists():
 shutil.make_archive(zip_path.with_suffix(""), "zip", publish)
 PY
 
-# Compute checksum and update manifest
-CHECKSUM=$(sha256sum "$ZIP_PATH" | awk '{print $1}')
+# Compute checksum (MD5 to match Jellyfin's manifest convention) and update manifest
+CHECKSUM=$(md5sum "$ZIP_PATH" | awk '{print $1}')
 export CHECKSUM VERSION
 python3 - <<'PY'
 import json
@@ -52,7 +52,7 @@ data = json.loads(manifest_path.read_text())
 entry = data[0]["versions"][0]
 entry["version"] = version
 entry["sourceUrl"] = f"{raw_base}/{zip_name}"
-entry["checksum"] = f"sha256:{checksum}"
+entry["checksum"] = checksum
 entry["timestamp"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
 manifest_path.write_text(json.dumps(data, indent=2))
 PY

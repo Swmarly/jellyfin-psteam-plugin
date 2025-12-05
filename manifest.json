@@ -9,12 +9,12 @@
     "imageUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/icon.png",
     "versions": [
       {
-        "version": "1.0.4",
-        "changelog": "Initial repository manifest and packaging with default server.fifthwit.net backend.",
+        "version": "1.0.5",
+        "changelog": "Updated repository checksum format to match Jellyfin manifest conventions.",
         "targetAbi": "10.9.0",
-        "sourceUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/dist/jellyfin-plugin-pstream_1.0.4.zip",
-        "checksum": "sha256:5f140779892a2c46af100aad2b366016b50aef1cd5bf1fb0d5bf9a8685f4073d",
-        "timestamp": "2025-12-05T00:14:04Z"
+        "sourceUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/dist/jellyfin-plugin-pstream_1.0.5.zip",
+        "checksum": "fa1bf8262624f3194851ec3f04856e77",
+        "timestamp": "2025-12-05T00:18:00Z"
       }
     ]
   }

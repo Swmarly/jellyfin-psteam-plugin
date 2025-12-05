@@ -4,7 +4,7 @@
     "guid": "c1cfe730-699c-46a8-a299-8fae4482fb27",
     "overview": "Browse and play P-Stream items directly from Jellyfin's channels section.",
     "description": "Adds a searchable P-Stream channel backed by server.fifthwit.net by default.",
-    "owner": "FifthWit",
+    "owner": "Swmarly",
     "category": "Channels",
     "imageUrl": "https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/icon.png",
     "versions": [

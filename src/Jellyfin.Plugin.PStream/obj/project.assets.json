@@ -1817,20 +1817,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sunbu\\.nuget\\packages\\": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sunbu\\Documents\\jellyfin-psteam-plugin\\src\\Jellyfin.Plugin.PStream\\Jellyfin.Plugin.PStream.csproj",
+      "projectUniqueName": "/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/Jellyfin.Plugin.PStream.csproj",
       "projectName": "Jellyfin.Plugin.PStream",
-      "projectPath": "C:\\Users\\sunbu\\Documents\\jellyfin-psteam-plugin\\src\\Jellyfin.Plugin.PStream\\Jellyfin.Plugin.PStream.csproj",
-      "packagesPath": "C:\\Users\\sunbu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sunbu\\Documents\\jellyfin-psteam-plugin\\src\\Jellyfin.Plugin.PStream\\obj\\",
+      "projectPath": "/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/Jellyfin.Plugin.PStream.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/src/Jellyfin.Plugin.PStream/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sunbu\\Documents\\jellyfin-psteam-plugin\\NuGet.Config",
-        "C:\\Users\\sunbu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/nuget.config",
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1848,13 +1848,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1880,26 +1874,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.22, 8.0.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.22, 8.0.22]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.22, 8.0.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

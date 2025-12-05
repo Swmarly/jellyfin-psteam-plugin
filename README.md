@@ -15,22 +15,20 @@ This plugin adds p-stream as a searchable channel inside Jellyfin. Once installe
 
 ## Plugin repository
 
-This repository now includes a Jellyfin plugin manifest (`manifest.json`) so it can be added directly as a custom repository in
-the Jellyfin admin dashboard. Build and package the plugin, then point Jellyfin at the raw URL for `manifest.json`.
+The repo itself is the plugin feed. Jellyfin can consume the manifest straight from `main`—no separate releases needed.
 
 ### Installation
 
-1. In Jellyfin, open **Dashboard → Plugins → Repositories** and click **+** to add a new repository.
-2. Enter `https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/manifest.json` as the manifest URL and save.
-3. Go to **Catalog**, locate **P-Stream**, and install the plugin.
-4. Restart Jellyfin after installation if prompted.
+1. In Jellyfin, open **Dashboard → Plugins → Repositories** and click **+**.
+2. Paste `https://raw.githubusercontent.com/Swmarly/jellyfin-psteam-plugin/main/manifest.json` and save.
+3. Open **Catalog**, install **P-Stream**, and restart Jellyfin if prompted.
 
 ### Building a distributable package
 
 1. Ensure the .NET SDK (8.0+) is available.
 2. Restore dependencies with `dotnet restore` (the plugin now pulls Jellyfin packages directly from nuget.org).
-3. Run `./scripts/package.sh <version>` (for example `./scripts/package.sh 1.0.0`) to publish the plugin, zip the output to
-   `dist/jellyfin-plugin-pstream_<version>.zip`, and update the manifest checksum automatically.
+3. Run `./scripts/package.sh <version>` (for example `./scripts/package.sh 1.0.1`) to publish, zip to `dist/jellyfin-plugin-pstream_<version>.zip`,
+   and rewrite `manifest.json` to point at the raw zip URL on `main`.
 4. Commit and push the updated zip + manifest so Jellyfin can download the plugin when installing from the repository.
 
 ## Building

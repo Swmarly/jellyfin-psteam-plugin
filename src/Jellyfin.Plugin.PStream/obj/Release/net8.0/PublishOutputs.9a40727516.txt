@@ -1,0 +1,17 @@
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Plugin.PStream.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Plugin.PStream.deps.json
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Plugin.PStream.pdb
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Diacritics.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/ICU4N.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/ICU4N.Transliterator.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/J2N.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/MediaBrowser.Common.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/MediaBrowser.Controller.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Data.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Extensions.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/MediaBrowser.Model.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Emby.Naming.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Microsoft.Extensions.Configuration.Binder.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Microsoft.Extensions.Logging.Abstractions.dll
+/mnt/c/Users/sunbu/Documents/jellyfin-psteam-plugin/dist/publish/Jellyfin.Plugin.PStream.xml
